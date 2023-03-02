@@ -7,12 +7,16 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 final class ArticleCollectionDto
 {
+    public int $id;
+
     #[Assert\NotNull]
     public string $title;
 
     public function __construct(
+        int $id,
         string $title,
     ) {
+        $this->id = $id;
         $this->title = $title;
     }
 
@@ -25,6 +29,7 @@ final class ArticleCollectionDto
          */
         foreach ($articles as $article) {
             $dtos[] = new self(
+                $article->getId(),
                 $article->getTitle(),
             );
         }
