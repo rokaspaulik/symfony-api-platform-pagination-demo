@@ -13,6 +13,8 @@ php bin/console doctrine:fixtures:load
 
 # start local server
 symfony serve
+
+# visit /api route and here we go...
 ```
 
 ## License
