@@ -1,0 +1,5 @@
+resources:
+    App\Entity\Article:
+        operations:
+            ApiPlatform\Metadata\GetCollection:
+                provider: App\State\ArticleCollectionProvider
